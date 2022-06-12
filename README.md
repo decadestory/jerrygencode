@@ -3,7 +3,7 @@
 
 # 用法
 ## 1 文件模板添加
-在.vscode/templates/添加模板文件内容如下:
+创建.vscode目录,在.vscode/templates/添加模板文件内容如下:
 ```java
 package ~namespace~;
 
@@ -32,7 +32,7 @@ public class ~fileName~ {
 ```
 
 ## 2 配置
-创建.vscode目录，并添加settings.json,输入以下json
+在.vscode目录，并添加settings.json,输入以下json
 ```json
 {
     "JerryGenCode":{
@@ -69,9 +69,7 @@ public class ~fileName~ {
 
 ## 3 运行生成
 按 F1 或 Ctrl + Shift + P 打开命令窗口，输入jerryGenCode如图：
-
-![](media/usage.png)
+![](images/usage.png)
 
 ## 4 效果
-
-![](media/demo.png)
+![](images/demo.png)
