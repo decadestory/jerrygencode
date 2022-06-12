@@ -70,8 +70,8 @@ public class ~fileName~ {
 ## 3 运行生成
 按 F1 或 Ctrl + Shift + P 打开命令窗口，输入jerryGenCode如图：
 
-![](./media/usage.png)
+![](media/usage.png)
 
 ## 4 效果
 
-![](./media/demo.png)
+![](media/demo.png)
