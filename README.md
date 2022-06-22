@@ -46,7 +46,7 @@ public class ~fileName~ {
         //生成模板配置
         "templates":[
             {
-                "fileExt":".java", //文件的名称后缀(必要)
+                "fileExt":"~fileName~.java", //文件的名称后缀(必要)
                 "filePath":"src/java/com/domain/app/entity/",//文件的名称后缀(必要)
                 "fileTemplatePath": "EntityTemplate.tmp", //模板名称,路径（.vscode/templates/）(必要)
                 "param":[
@@ -55,7 +55,7 @@ public class ~fileName~ {
                 ]
             },
             {
-                "fileExt":"Service.java",
+                "fileExt":"~fileName~Service.java",
                 "filePath":"src/java/com/domain/app/service/",
                 "fileTemplatePath": "ServiceTemplate.tmp",
                 "param":[
