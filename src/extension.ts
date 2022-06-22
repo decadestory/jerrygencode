@@ -39,14 +39,16 @@ export function activate(context: vscode.ExtensionContext) {
 				distContent = handleReplace(distContent, t.param);
 			}
 
-			if(fs.existsSync(distDir + distFileName + t.fileExt)){
-				vscode.window.showErrorMessage(distFileName + t.fileExt+"文件已存在，请重新命名");
+			distFileName=t.fileExt.replace(new RegExp("~fileName~", "g"), distFileName);
+
+			if(fs.existsSync(distDir + distFileName)){
+				vscode.window.showErrorMessage(distFileName+"文件已存在，请重新命名");
 				return;
 			}
 
-			fs.writeFileSync(distDir + distFileName + t.fileExt, distContent);
+			fs.writeFileSync(distDir + distFileName, distContent);
 
-			console.log(distDir + distFileName + t.fileExt+' 生成成功！');
+			console.log(distDir + distFileName+' 生成成功！');
 		});
 
 		vscode.window.showInformationMessage('生成成功！');
@@ -63,6 +65,7 @@ function handleReplace(distContent: string, param: string[]) {
 	});
 	return distContent;
 }
+
 
 function getConfFileName(param: string[]) {
 	for (const p in param) {
